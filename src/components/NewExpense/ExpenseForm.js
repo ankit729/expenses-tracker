@@ -4,7 +4,7 @@ import { useState } from "react";
 function ExpenseForm(props) {
   const [open, setOpen] = useState(false);
   const [userInput, setUserInput] = useState({
-    amount: "",
+    amount: 0,
     date: "",
     title: "",
   });
@@ -16,11 +16,12 @@ function ExpenseForm(props) {
   function submitHandler(event) {
     event.preventDefault();
     const ret = userInput;
+    ret.amount = +ret.amount;
     ret.date = new Date(ret.date);
     ret.id = Math.random().toString();
     props.onAddNewExpense(ret);
     setUserInput({
-      amount: "",
+      amount: 0,
       date: "",
       title: "",
     });

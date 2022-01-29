@@ -5,11 +5,11 @@
   align-items: center;
 }
 
-.chart-bar__inner {
+.chart-bar_inner {
   height: 100%;
-  width: 100%;
+  width: 1rem;
   border: 1px solid #313131;
-  border-radius: 12px;
+  border-radius: 1rem;
   background-color: #c3b4f3;
   overflow: hidden;
   display: flex;
@@ -17,14 +17,13 @@
   justify-content: flex-end;
 }
 
-.chart-bar__fill {
+.chart-bar_fill {
   background-color: #4826b9;
-  width: 100%;
   transition: all 0.3s ease-out;
 }
 
-.chart-bar__label {
+.chart-bar_label {
   font-weight: bold;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   text-align: center;
 }
